@@ -1,0 +1,22 @@
+<%-include('partials/_main-reg')%>
+<body>
+    <div class="card-header login">
+        <form action="/ingresar/login" method="post">
+            <h1>Ingrese los datos de su cuenta</h1>
+            <img src="/img/user.png" alt="user">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="log_email">
+            </div>  
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" name="log_pass">
+              <a href="#">Olvido su password?</a>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+          </form>
+    </div>
+    
+</body>
+<%-include('partials/_footer'); %>

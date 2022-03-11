@@ -1,0 +1,42 @@
+<%-include('partials/_main')%>
+<form class="card" action="" method="post">
+    <p class="user" id="user_name" >Usuario: <%= row[0].name_user %></p>
+    <p class="cbu" id="cbus">CBU N°: <%= row[0].CBU %></p>
+    <p class="saldo">Saldo actual en la cuenta: $<%= row[0].SALDO_CUENTA %></p>
+    <h1>Movimiento en la cuenta</h1>
+    
+    <div class="conteiner-table">
+        <div class="row mt-5">
+            <div class="col md-7">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                    
+                            <th>TRANSFERIDO</th>
+                            <th>RETIRADO</th>
+                            <th>INGRESADO</th>
+                            <th>FECHA</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (row) { %>
+                            <% for (var i = 0; i < row.length; i++) { %>
+                                <tr>
+                                    <th><%= row[i].TRANSFERIDO %></th>
+                                    <th><%= row[i].RETIRADO %></th>
+                                    <th><%= row[i].INGRESADO %></th>
+                                    <th><%= row[i].FECHA %></th>
+                                </tr>
+
+                            <% } %>
+                         <% } %> 
+                    </tbody>    
+                </table>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary" href="/ingresar/home">Volver</a> 
+</form>
+
+<%-include('partials/_footer')%>

@@ -1,0 +1,15 @@
+<%-include('partials/_main')%>
+
+<body>
+    <form class="card" action="/ingresar/login/add_mony/update_mony/<%= row[0].id_users %>" method="post">
+        <p class="user" id="user_name" >Usuario: <%= row[0].name_user %></p>
+        <p class="cbu" id="cbus">CBU N°: <%= row[0].CBU %></p>
+        <p class="saldo">Saldo actual en la cuenta: $<%= row[0].SALDO_CUENTA %></p>
+        <h1>Agregar saldo a la cuenta</h1>
+        <input type="number" name="new_saldo" placeholder="ingrese el monto para la cuenta:">
+        <button type="submit" class="btn btn-primary">Agregar dinero</button>
+        <a class="btn btn-primary" href="/ingresar/home">Volver</a> 
+    </form>
+</body>
+
+<%-include('partials/_footer'); %>

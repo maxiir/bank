@@ -1,0 +1,16 @@
+<%-include('partials/_main')%>
+
+
+<body>
+    <div class="card">
+        <p class="user" id="user_name" >Usuario: <%= row[0].name_user %></p>
+        <p class="cbu" id="cbus">CBU N°: <%= row[0].CBU %></p>
+        <p class="saldo">Saldo en la cuenta: $<%= row[0].SALDO_CUENTA %> </p> <!--captura el valor de la consulta-->
+        <a class="btn btn-primary" href="/ingresar/login/add_mony/<%= row[0].id_users %>">Ingresar dinero</a> <!--le paso el id de la query-->
+        <a class="btn btn-primary" href="/ingresar/login/retirar_mony/<%= row[0].id_users %>">Retirar dinero</a>
+        <a class="btn btn-primary" href="/ingresar/login/transfer_mony/<%= row[0].id_users %>">Transferir</a>
+        <a class="btn btn-primary historial" href="/ingresar/login/historial_account/<%= row[0].id_users %>">Historial de movimientos</a>
+        
+    </div>
+</body>
+<%-include('partials/_footer'); %>

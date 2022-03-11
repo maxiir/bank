@@ -1,0 +1,15 @@
+<%-include('partials/_main-reg')%>
+<body>
+    <div class="card token">
+        <h1>Codigo de verificacion enviado</h1>
+        <p>Revise su bandeja de entrada para validar la cuenta</p>
+        <p>Codigo de 5 digitos:</p>
+        <form action="/validar" method="post">
+            <input type="text" name="token" >
+            <input type="submit" class="btn btn-primary btn-env">
+            <a href="#">reenviar codigo</a>
+        </form>   
+    </div>
+</body>
+        
+<%-include('partials/_footer'); %>
